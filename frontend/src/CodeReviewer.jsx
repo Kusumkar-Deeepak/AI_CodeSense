@@ -27,7 +27,7 @@ function CodeReviewer() {
           headers: {
             'Content-Type': 'application/json',
           },
-          withCredentials: true, // ✅ Ensures cookies are passed for authentication if needed
+          withCredentials: false, // ✅ Must be false unless using cookies
         }
       );
       setReview(response.data);
@@ -38,11 +38,9 @@ function CodeReviewer() {
       setLoading(false);
     }
   }
-  
 
   return (
     <>
-      {/* Welcome Heading */}
       <div className="welcome-heading">Welcome to AI CodeSense 🤖</div>
 
       <main>
