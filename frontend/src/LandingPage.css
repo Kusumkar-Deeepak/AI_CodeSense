@@ -1,0 +1,110 @@
+.landing-container {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Ensures child elements position correctly */
+    padding: 20px; /* Avoids content touching screen edges */
+}
+
+/* Project Name - AI CodeSense */
+.landing-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 20px; /* Adjusted to prevent overflow */
+    right: 30px; /* Keeps it aligned to the right */
+    margin: 0;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+/* Subtitle (AI-Powered Code Reviewer & Bug Detector) */
+.landing-subtitle {
+    font-size: 1.5rem;
+    opacity: 0.8;
+    margin-top: 60px; /* Adds space after the title */
+}
+
+/* Button Styling */
+.get-started-btn {
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.get-started-btn:hover {
+    background: #e84118;
+}
+
+/* Features Section */
+.features, .pros-cons, .developer {
+    margin-top: 40px;
+    width: 80%;
+    text-align: left; /* Align text for readability */
+}
+
+.features h2, .pros h2, .cons h2, .developer h2 {
+    margin-bottom: 10px;
+}
+
+.features ul, .pros ul, .cons ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li, .pros li, .cons li {
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+/* Pros and Cons Section */
+.pros-cons {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+}
+
+.pros, .cons {
+    flex: 1;
+    margin: 10px;
+}
+
+.developer p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .landing-title {
+        font-size: 2rem;
+        right: 10px;
+        top: 10px;
+        padding: 5px 10px;
+    }
+
+    .pros-cons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pros, .cons {
+        width: 100%;
+        text-align: center;
+    }
+}
