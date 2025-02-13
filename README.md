@@ -15,7 +15,7 @@ AI CodeSense is an AI-powered code reviewer that helps developers analyze and im
 ---
 
 ## 📸 Preview  
-<img src="preview.png" alt="AI CodeSense Preview" width="800"/>  
+🔗 **Live Demo:** [AI CodeSense](https://a-codesense.onrender.com)  
 
 ---
 
@@ -25,5 +25,4 @@ AI CodeSense is an AI-powered code reviewer that helps developers analyze and im
 - **AI Model:** Google Gemini AI  
 
 ---
-
 
