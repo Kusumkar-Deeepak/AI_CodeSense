@@ -1,110 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: white;
+}
+
+/* Landing Container */
 .landing-container {
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
-    color: white;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative; /* Ensures child elements position correctly */
-    padding: 20px; /* Avoids content touching screen edges */
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  position: relative;
 }
 
-/* Project Name - AI CodeSense */
+/* Project Title */
 .landing-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    position: absolute;
-    top: 20px; /* Adjusted to prevent overflow */
-    right: 30px; /* Keeps it aligned to the right */
-    margin: 0;
-    padding: 10px 20px;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
 }
 
-/* Subtitle (AI-Powered Code Reviewer & Bug Detector) */
+/* Intro Section */
+.intro {
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+}
+
 .landing-subtitle {
-    font-size: 1.5rem;
-    opacity: 0.8;
-    margin-top: 60px; /* Adds space after the title */
+  font-size: 1.5rem;
+  opacity: 0.8;
+  margin-bottom: 20px;
 }
 
-/* Button Styling */
+/* Get Started Button */
 .get-started-btn {
-    background: #ff4757;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 10px;
-    margin-top: 20px;
-    cursor: pointer;
-    transition: 0.3s;
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: inline-block;
+  margin-top: 20px;
 }
 
 .get-started-btn:hover {
-    background: #e84118;
+  background: #e84118;
 }
 
 /* Features Section */
 .features, .pros-cons, .developer {
-    margin-top: 40px;
-    width: 80%;
-    text-align: left; /* Align text for readability */
+  margin-top: 50px;
+  width: 80%;
+  text-align: left;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .features h2, .pros h2, .cons h2, .developer h2 {
-    margin-bottom: 10px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .features ul, .pros ul, .cons ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .features li, .pros li, .cons li {
-    font-size: 1.2rem;
-    padding: 5px;
+  font-size: 1.2rem;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  margin-bottom: 6px;
 }
 
 /* Pros and Cons Section */
 .pros-cons {
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-    margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .pros, .cons {
-    flex: 1;
-    margin: 10px;
+  flex: 1;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: left;
 }
 
+/* Developer Section */
 .developer p {
-    font-size: 1.1rem;
-    opacity: 0.9;
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
-    .landing-title {
-        font-size: 2rem;
-        right: 10px;
-        top: 10px;
-        padding: 5px 10px;
-    }
+  .landing-container {
+    height: auto;
+    padding: 20px;
+  }
 
-    .pros-cons {
-        flex-direction: column;
-        align-items: center;
-    }
+  .landing-title {
+    font-size: 2.2rem;
+    width: 90%;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+  }
 
-    .pros, .cons {
-        width: 100%;
-        text-align: center;
-    }
+  .intro {
+    margin-top: 30px;
+  }
+
+  .landing-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .get-started-btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+
+  .features, .pros-cons, .developer {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .features h2 {
+    text-align: center;
+  }
+
+  .features ul {
+    padding-left: 20px;
+  }
+
+  .pros-cons {
+    flex-direction: column;
+  }
+
+  .pros, .cons {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
 }

@@ -4,16 +4,22 @@ import "./LandingPage.css";
 const LandingPage = () => {
   return (
     <div className="landing-container">
+      {/* Project Title */}
       <header>
         <h1 className="landing-title">AI CodeSense 🤖</h1>
+      </header>
+
+      {/* Intro Section */}
+      <section className="intro">
         <p className="landing-subtitle">
           AI-Powered Code Reviewer & Bug Detector
         </p>
         <Link to="/review">
           <button className="get-started-btn">Get Started</button>
         </Link>
-      </header>
+      </section>
 
+      {/* Features Section */}
       <section className="features">
         <h2>🚀 Features</h2>
         <ul>
@@ -25,6 +31,7 @@ const LandingPage = () => {
         </ul>
       </section>
 
+      {/* Pros & Cons Section */}
       <section className="pros-cons">
         <div className="pros">
           <h2>✅ Pros</h2>
@@ -45,11 +52,13 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* Developer Info */}
       <section className="developer">
         <h2>👨‍💻 Developer Info</h2>
         <p>
-          Built by <strong>Nikita Dilip Kundle</strong>, a passionate developer
-          focused on AI & Machine Learning applications in software development.
+          Built by <strong>Kusumkar Deepak Prakash</strong>, a passionate
+          Web-developer focused on AI & MERN Stack applications in software
+          development.
         </p>
       </section>
     </div>
