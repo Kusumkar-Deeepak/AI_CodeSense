@@ -20,14 +20,25 @@ function CodeReviewer() {
   async function reviewCode() {
     setLoading(true);
     try {
-      const response = await axios.post('https://ai-codesense.onrender.com/ai/get-review', { code });
+      const response = await axios.post(
+        'https://ai-codesense.onrender.com/ai/get-review',
+        { code },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          withCredentials: true, // ✅ Ensures cookies are passed for authentication if needed
+        }
+      );
       setReview(response.data);
     } catch (error) {
-      setReview("Error fetching review. Please try again.", error);
+      console.error("CORS Error:", error);
+      setReview("Error fetching review. Please try again.");
     } finally {
       setLoading(false);
     }
   }
+  
 
   return (
     <>
