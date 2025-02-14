@@ -9,7 +9,7 @@ app.use(express.json());
 // ✅ Configure CORS Properly
 const corsOptions = {
   origin: 'https://a-codesense.onrender.com', // ✅ Allow frontend only
-  methods: ['GET', 'POST', 'OPTIONS'],
+  methods: ['GET', 'POST', 'OPTIONS'], // methods
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true, // ✅ Allows cookies & session headers
 };
